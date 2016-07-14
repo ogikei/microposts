@@ -1,4 +1,4 @@
-<h1>Profile Edit</h1>
+<h1>Account setting</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -7,6 +7,12 @@
 
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :region %>
+      <%= f.text_field :region, class: 'form-control' %>
+
+      <%= f.label :profile %>
+      <%= f.text_area :profile, class: 'form-control' %>
 
       <%= f.label :email %>
       <%= f.text_field :email, class: 'form-control' %>
