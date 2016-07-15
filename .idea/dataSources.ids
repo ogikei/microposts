@@ -46,12 +46,18 @@
         <mandatory>1</mandatory>
         <data-type>DATETIME(0,-1)|12</data-type>
       </column>
-      <index id="15" parent="4" name="index_users_on_email">
+      <column id="15" parent="4" name="region">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="16" parent="4" name="profile">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <index id="17" parent="4" name="index_users_on_email">
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="16" parent="4">
+      <key id="18" parent="4">
         <columns>id</columns>
         <primary>1</primary>
       </key>
