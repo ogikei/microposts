@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def check_current_user
-    if params[:id] != session[:user_id]
+    if params[:id].to_i != session[:user_id]
       redirect_to root_path, notice: "不正な操作です。"
     end
   end
