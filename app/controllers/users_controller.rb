@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_message, only: [:edit, :update]
+  before_action :set_user, :check_current_user, only: [:edit, :update]
 
   def show
     @user = User.find(params[:id])
@@ -37,7 +37,13 @@ class UsersController < ApplicationController
                                  :password_confirmation, :region, :profile)
   end
 
-  def set_message
+  def set_user
     @user = User.find(params[:id])
+  end
+
+  def check_current_user
+    if params[:id] != session[:user_id]
+      redirect_to root_path, notice: "不正な操作です。"
+    end
   end
 end
