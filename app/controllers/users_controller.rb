@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.order(created_at: :desc)
   end
 
   def new
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    binding.pry
     if @user.update(user_params)
       redirect_to root_path, notice: "プロフィールを編集しました。"
     else
