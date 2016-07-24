@@ -24,12 +24,19 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
     if @user.update(user_params)
       redirect_to root_path, notice: "プロフィールを編集しました。"
     else
       render 'edit'
     end
+  end
+
+  def followings
+    @user = User.find(params[:id])
+    @followings = @user.following_users
+  end
+
+  def followers
   end
 
   private

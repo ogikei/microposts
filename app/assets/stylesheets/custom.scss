@@ -187,3 +187,13 @@ span.picture {
 .my_profile {
   margin-top: 50px;
 }
+
+ul.follow_follower {
+  display: table;
+}
+
+ul.follow_follower.li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
