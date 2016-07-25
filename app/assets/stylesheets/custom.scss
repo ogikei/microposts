@@ -192,8 +192,11 @@ ul.follow_follower {
   display: table;
 }
 
-ul.follow_follower.li {
+ul.follow_follower li {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  .followings_link {
+    margin-right: 10px;
+  }
 }
