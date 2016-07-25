@@ -6,8 +6,14 @@
         <%= @user.name %>
       </h1>
       <ul class="follow_follower nav">
-        <li><%= link_to 'Followings', followings_user_path(@user) %></li>
-        <li><%= link_to 'Followers', followers_user_path(@user) %></li>
+        <li>
+          <span><%= link_to 'Followings', followings_user_path(@user) %></span></li>
+          <span><%= @followings.count %></span>
+        </li>
+        <li>
+          <span><%= link_to 'Followers', followers_user_path(@user) %></span>
+          <span><%= @followers.count %></span>
+        </li>
       </ul>
     </section>
   </aside>
