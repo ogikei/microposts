@@ -139,7 +139,7 @@ aside {
 }
 
 /* microposts */
-.microposts {
+.microposts, .followings {
   list-style: none;
   padding: 0;
   li {
@@ -186,4 +186,15 @@ span.picture {
 
 .my_profile {
   margin-top: 50px;
+}
+
+ul.follow_follower {
+  display: table;
+  width: 150px;
+}
+
+ul.follow_follower li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }

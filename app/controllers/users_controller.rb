@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.order(created_at: :desc)
+    @followings = @user.following_users
+    @followers = @user.follower_users
   end
 
   def new
@@ -24,12 +26,21 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
     if @user.update(user_params)
       redirect_to root_path, notice: "プロフィールを編集しました。"
     else
       render 'edit'
     end
+  end
+
+  def followings
+    @user = User.find(params[:id])
+    @followings = @user.following_users
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @followers = @user.follower_users
   end
 
   private
