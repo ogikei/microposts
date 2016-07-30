@@ -8,11 +8,11 @@
       <ul class="follow_follower list-group">
         <li class="followings_link">
           <span><%= link_to 'Followings', followings_user_path(@user) %></span>
-          <span><%= @followings.count %></span>
+          <span><%= @user.following_users.count %></span>
         </li>
         <li class="followers_link">
           <span><%= link_to 'Followers', followers_user_path(@user) %></span>
-          <span><%= @followers.count %></span>
+          <span><%= @user.follower_users.count %></span>
         </li>
       </ul>
     </section>
@@ -22,6 +22,7 @@
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
+        <%= render @microposts %>
         <%= paginate @microposts %>
       </ol>
     <% end %>
