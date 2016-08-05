@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aaf93468-1454-4e12-9eed-30a70cb17dc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microposts.iml" afterPath="$PROJECT_DIR$/microposts.iml" />
-    </list>
+    <list default="true" id="aaf93468-1454-4e12-9eed-30a70cb17dc5" name="Default" comment="" />
     <ignored path="microposts.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -1666,7 +1660,7 @@
       <workItem from="1469883965535" duration="18359000" />
       <workItem from="1469909347138" duration="4000" />
       <workItem from="1469909419357" duration="1972000" />
-      <workItem from="1469946567553" duration="2698000" />
+      <workItem from="1469946567553" duration="2896000" />
     </task>
     <servers />
   </component>
@@ -1682,7 +1676,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127855000" />
+    <option name="totallyTimeSpent" value="128053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
