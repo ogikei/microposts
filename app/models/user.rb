@@ -8,15 +8,20 @@ class User < ActiveRecord::Base
   validates :region, length: { maximum: 50 }
   validates :profile, length: { maximum: 500 }
   has_secure_password
+
   has_many :microposts
+
   has_many :following_relationships, class_name: "Relationship",
                                      foreign_key: "follower_id",
                                      dependent: :destroy
   has_many :following_users, through: :following_relationships, source: :followed
+
   has_many :follower_relationships, class_name: "Relationship",
                                     foreign_key: "followed_id",
                                     dependent: :destroy
   has_many :follower_users, through: :follower_relationships, source: :follower
+
+  has_many :retweets, dependent: :destroy
 
   def follow(other_user)
     following_relationships.find_or_create_by(followed_id: other_user.id)
